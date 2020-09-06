@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee Form"
+        android:layout_marginLeft="10dp"
+        android:textSize="25sp" />
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: "
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="textShortMessage" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender: "
+                android:textSize="20sp" />
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textSize="20sp" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail: "
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/text_email"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saraly: "
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/text_saraly"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/submitbtn"
+        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:text="Send Data"
+        android:background="#00FF00"
+        android:layout_below="@+id/table"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickShowDetail"/>
+    <Button
+        android:id="@+id/resetbtn"
+        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:text="RESET"
+        android:background="#FF0066"
+        android:layout_below="@+id/table"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="20dp"
+        android:onClick="reset"/>
+</RelativeLayout>
+
